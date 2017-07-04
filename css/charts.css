@@ -1,0 +1,21 @@
+.traffic-1 {
+  width: 80%;
+  margin: 15px auto;
+  clear: both;
+  padding-top: 40px;
+}
+.traffic-2 {
+  width: 100%;
+  border-top: 1px solid #e9e3e3;
+  padding-top: 50px;
+  overflow: auto;
+}
+.daily-traffic {
+  float: left;
+  width: 49.6%;
+  border-right: 1px solid #D9D9D9;
+}
+.mobile-users {
+  float: right;
+  width: 50%;
+}
