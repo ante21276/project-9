@@ -151,22 +151,25 @@
       </div>
       <div class="traffic-1">
         <div id="js-legend">
-          <ul>
-            <li><a href="#" target="_blank">Hourly</a></li>
-            <li><a href="#" target="_blank">Daily</a></li>
-            <li><a href="#" target="_blank">Weekly</a></li>
-            <li><a href="#" target="_blank">Monthly</a></li>
+          <ul id="traffic-ul">
+            <li>Hourly</li>
+            <li>Daily</li>
+            <li>Weekly</li>
+            <li>Monthly</li>
           </ul>
         </div>
-        <canvas id="myChart" style="width=50%"></canvas>
+        <canvas class="Hourly" id="Hourly-traffic" width="800" height="300"></canvas>
+        <canvas class="Daily" id="Daily-traffic" width="800" height="300"></canvas>
+        <canvas class="weekly" id="Weekly-traffic" width="800" height="300"></canvas>
+        <canvas class="monthly" id="Monthly-traffic" width="800" height="300"></canvas>
       </div>
       <div class="traffic-2">
         <div class="daily-traffic">
-            <canvas id="myChart-daily" height="100"></canvas>
+            <canvas id="bar-daily-traffic" width="400" height="150"></canvas>
         </div>
 
         <div class="mobile-users">
-            <canvas id="myChart-mobile" height="100"></canvas>
+            <canvas id="mobile-users" width="400" height="150"></canvas>
         </div>
       </div>
       <div class="social-div">
@@ -220,7 +223,7 @@
 
       <div class="mem-act-div">
 
-        <div class="sub">
+        <div class="sub sub-new-members">
           <h5>NEW MEMBERS</h5>
           <div class="mem-div">
             <img src="img/member1.jpg" alt="member-photo">

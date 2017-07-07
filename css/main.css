@@ -208,7 +208,7 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #D9D9D9;
+  border-top: 1px solid #E9E3E3;
   border-bottom: none;
   margin-top: 40px;
   color: #989999;
@@ -233,7 +233,7 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #E9E3E3;
 }
 .icon-next {
   width: 10px;
@@ -243,7 +243,7 @@ main {
   margin: 0 20px 0 10px;
   display: flex;
   padding: 15px 0px 15px 0px;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #E9E3E3;
 }
 .mem-div:last-of-type {
   border-bottom: 0pc solid transparent;
@@ -280,7 +280,7 @@ textarea {
 }
 .settings-message {
   width: 100%;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #E9E3E3;
   padding-bottom: 50px;
 }
 .settings-notifications {
@@ -390,7 +390,7 @@ select,
     display:none;
   }
   #bell {
-    border-right: #5D61BF 1px solid;
+    border-right: #E9E3E3 1px solid;
     padding-right: 10px;
     margin-right: 10px;
   }
@@ -531,6 +531,9 @@ select,
   .mem-act-div {
     flex-direction: row;
   }
+  .mem-act-div .sub-new-members {
+    border-right: solid 1px #E9E3E3;
+  }
   .sub {
     width: 50%;
   }
@@ -541,7 +544,7 @@ select,
   }
   .settings-message {
     width: 50%;
-    border-right: 1px solid #D9D9D9;
+    border-right: 1px solid #E9E3E3;
     border-bottom: none;
   }
   .settings-notifications {
