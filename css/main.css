@@ -1,7 +1,6 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  height: 100%;
   overflow: auto;
   background: #4B4A70;
   color:#fff;
@@ -12,6 +11,7 @@ ul {
 .horizontal{
   background: #7477BF;
   height: 50px;
+  z-index: 10000000;
 }
 .horizontal ul {
   margin: 0;
@@ -19,7 +19,7 @@ ul {
   flex-direction: row;
   color: #fff;
   padding: 14px 20px 0 20px;
-  overflow: hidden;
+
 }
 .horizontal li img {
   width: 25px;
@@ -31,7 +31,7 @@ ul {
 }
 .hamburger{
   font-size: 22px;
-  background:none;
+  background:#7477BF;;
   top:0;
   left:0;
   color:#fff;
@@ -57,28 +57,29 @@ ul {
   padding: 0;
   margin-top: -5px;
   z-index:10000000000000;
-  background-color: none;
+  background-color: #7477BF;
 }
 
-.menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#f1f1f1;  position:absolute; text-align:center; font-size:12px;}
+.menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#7475C1;  position:absolute; text-align:center; font-size:12px;}
 .menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
 .menu li {display: block;   padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
-.menu li:hover{display: block;    background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+.menu ul:first-child {border-top:#dddddd 1px solid;}
+.menu li:hover{display: block;   color: #7475C1; background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
 .menu ul li a { text-decoration:none;  margin: 0px; color:#666;}
-.menu ul li a:hover {  color: #666; text-decoration:none;}
+.menu ul li a:hover {  color: #7475C1; text-decoration:none;}
 .menu a{text-decoration:none; color:#666;}
 .menu a:hover{text-decoration:none; color:#666;}
 
-.link-1 {
+.item-1 {
   margin-top: -3px;
 }
-.link-2 {
+.item-2 {
   margin-right: 20px;
 }
-.link-3{
+.item-3{
   margin-right: auto;
 }
-.link-5 {
+.item-5 {
   margin-right: 5px;
 }
 .item-3 {
@@ -90,6 +91,7 @@ ul {
 #bell {
   width: 20px;
 }
+
 .vertical {
   display: none;
 }
@@ -160,7 +162,7 @@ main {
     cursor:pointer;
     outline: none;
     padding: 0;
-    background-color: none;
+    background-color: transparent;
     float: right;
 }
 .social-div {
@@ -186,9 +188,6 @@ main {
   padding: 10px;
   background: #7477BF;
   border-radius: 50%;
-}
-.social-svg path {
-  fill: #fff;
 }
 .social-div div h5,
 .social-div div h4 {
@@ -228,6 +227,7 @@ main {
 .sub h5 {
   margin-left: 2.5%;
   font-weight: 400;
+  color:#fff;
 }
 .sub {
   width: 100%;
@@ -238,6 +238,7 @@ main {
 .icon-next {
   width: 10px;
   height: 10px;
+
 }
 .mem-div {
   margin: 0 20px 0 10px;
@@ -314,14 +315,13 @@ input, textarea {
   color: #fff;
   padding: 0;
   border-radius: 4px;
-  box-shadow: 0;
   border: none;
   margin-top: 10px;
 }
 legend, .settings h5 {
   font-weight: 400;
   font-size: 12px;
-  color: #989999;
+  color: #fff;
 }
 .settings h5 {
   margin-left: 5%;
@@ -331,7 +331,9 @@ legend, .settings h5 {
 .settings-notifications form  {
   width: 90%;
   margin-left: 5%;
-
+}
+.settings-notifications h5 {
+  margin-bottom: 40px;
 }
 .settings-notifications label {
     width: 70%;
@@ -393,6 +395,7 @@ select,
     border-right: #E9E3E3 1px solid;
     padding-right: 10px;
     margin-right: 10px;
+    cursor: pointer;
   }
   .horizontal li img {
     display: block;
@@ -475,14 +478,13 @@ select,
     color: #fff;
     padding: 0;
     border-radius: 4px;
-    box-shadow: 0;
     border: none;
     margin-top: 10px;
   }
   legend, .settings h5 {
     font-weight: 400;
     font-size: 12px;
-    color: #989999;
+    color: #fff;
   }
   .settings h5 {
     margin-left: 5%;

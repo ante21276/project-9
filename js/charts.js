@@ -15,26 +15,28 @@ let hourlyChart = new Chart (hourlyTraffic, {
     labels: ["12 - 5", "5 - 11", "12 - 18", "19 - 12"],
     datasets: [
 			{
-				fill: false,
+				fill: true,
 				lineTension: 0,
-				borderColor: "#a111af",
+				borderColor: "#878bde",
+        backgroundColor: "rgba(172, 174, 230, 0.70)",
 				borderCapStyle: 'butt',
-				borderDash: [],
 				borderDashOffset: 0.0,
-				borderJoinStyle: 'miter',
 				pointBorderColor: "#fff",
 				pointHoverRadius: 4,
 				pointRadius: 3,
-				data: [12,23,32,19]
+				data: [2,10,32,15],
+
 			}
 		]
 	},
   options: {
 		scales: {
 			xAxes: [{
+        ticks: {
+					beginAtZero: true,
+				},
 				gridLines: {
-					color: "#000000",
-					display: false
+					color: "#c6c1c1"
 				}
 			}],
 			yAxes: [{
@@ -42,8 +44,8 @@ let hourlyChart = new Chart (hourlyTraffic, {
 					beginAtZero: true
 				},
 				gridLines: {
-          			color: "#000000",
-          			display: false
+          			color: "#c6c1c1",
+
         		}
 			}]
 		},
@@ -59,24 +61,16 @@ let dailyChart = new Chart(dailyTraffic, {
 		labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
 		datasets: [
 			{
-				label: "Daily Traffic",
-				fill: true,
-				lineTension: 0.5,
-				backgroundColor: "#a111af", //$light-purple
-				borderColor: "#72dff7", //$light-blue
+        fill: true,
+				lineTension: 0,
+				borderColor: "#878bde",
+        backgroundColor: "rgba(172, 174, 230, 0.70)",
 				borderCapStyle: 'butt',
-				borderDash: [],
 				borderDashOffset: 0.0,
-				borderJoinStyle: 'miter',
 				pointBorderColor: "#fff",
-				pointBorderWidth: 1,
-				pointHoverRadius: 5,
-				pointHoverBackgroundColor: "rgba(66,212,244,1)",
-				pointHoverBorderColor: "rgba(220,220,220,1)",
-				pointHoverBorderWidth: 2,
-				pointRadius: 7,
-				pointHitRadius: 10,
-				data: [33,59,78,63,69,55,40]
+				pointHoverRadius: 4,
+				pointRadius: 3,
+				data: [10,20,50,30,30,70,40]
 			}
 		]
 	},
@@ -85,8 +79,7 @@ let dailyChart = new Chart(dailyTraffic, {
 		scales: {
 			xAxes: [{
 				gridLines: {
-					color: "#000000",
-					display: false
+          color: "#c6c1c1",
 				}
 			}],
 			yAxes: [{
@@ -94,8 +87,7 @@ let dailyChart = new Chart(dailyTraffic, {
 					beginAtZero: true
 				},
 				gridLines: {
-          			color: "#000000",
-          			display: false
+          			color: "#c6c1c1",
         		}
 			}]
 		},
@@ -105,33 +97,22 @@ let dailyChart = new Chart(dailyTraffic, {
 	}
 });
 
-
-
-
 let weeklyChart = new Chart(weeklyTraffic, {
 	type: 'line',
 	data: {
 		labels: ['1', '2', '3', '4', '5', '6', '7'],
 		datasets: [
 			{
-				label: "Weekly Traffic",
-				fill: true,
-				lineTension: 0.5,
-				backgroundColor: "#e8ff1e", //$yellow
-				borderColor: "#a111af", //$light-purple
+        fill: true,
+				lineTension: 0,
+				borderColor: "#878bde",
+        backgroundColor: "rgba(172, 174, 230, 0.70)",
 				borderCapStyle: 'butt',
-				borderDash: [],
 				borderDashOffset: 0.0,
-				borderJoinStyle: 'miter',
 				pointBorderColor: "#fff",
-				pointBorderWidth: 1,
-				pointHoverRadius: 5,
-				pointHoverBackgroundColor: "rgba(66,212,244,1)",
-				pointHoverBorderColor: "rgba(220,220,220,1)",
-				pointHoverBorderWidth: 2,
-				pointRadius: 7,
-				pointHitRadius: 10,
-				data: [153,175,164,186, 178, 181, 186]
+				pointHoverRadius: 4,
+				pointRadius: 3,
+				data: [153,175,164,186, 178, 181, 150]
 			}
 		]
 	},
@@ -139,8 +120,8 @@ let weeklyChart = new Chart(weeklyTraffic, {
 		scales: {
 			xAxes: [{
 				gridLines: {
-					color: "#000000",
-					display: false
+					color: "#c6c1c1",
+					display: true
 				}
 			}],
 			yAxes: [{
@@ -148,8 +129,8 @@ let weeklyChart = new Chart(weeklyTraffic, {
 					beginAtZero: false
 				},
 				gridLines: {
-          			color: "#000000",
-          			display: false
+          			color: "#c6c1c1",
+          			display: true
         		}
 			}]
 		},
@@ -165,24 +146,15 @@ let monthlyChart = new Chart(monthlyTraffic, {
 		labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
 		datasets: [
 			{
-				label: "Weekly Traffic",
-				fill: true,
-				lineTension: 0.5,
-				backgroundColor: "#a111af", //$light-purple
-				borderColor: "#e8ff1e", //$yellow
+        fill: true,
+				lineTension: 0,
+				borderColor: "#878bde",
+        backgroundColor: "rgba(172, 174, 230, 0.70)",
 				borderCapStyle: 'butt',
-				borderDash: [],
-				borderDashOffset: 0.0,
-				borderJoinStyle: 'miter',
 				pointBorderColor: "#fff",
-				pointBorderWidth: 1,
-				pointHoverRadius: 5,
-				pointHoverBackgroundColor: "rgba(66,212,244,1)",
-				pointHoverBorderColor: "#e8ff1e",
-				pointHoverBorderWidth: 2,
-				pointRadius: 7,
-				pointHitRadius: 10,
-				data: [433,459,494,533,606,578,612,633]
+				pointHoverRadius: 4,
+				pointRadius: 3,
+				data: [333,459,494,533,606,578,400,300]
 			}
 		]
 	},
@@ -190,8 +162,8 @@ let monthlyChart = new Chart(monthlyTraffic, {
 		scales: {
 			xAxes: [{
 				gridLines: {
-					color: "#000000",
-					display: false
+					color: "#c6c1c1",
+					display: true
 				}
 			}],
 			yAxes: [{
@@ -199,8 +171,8 @@ let monthlyChart = new Chart(monthlyTraffic, {
 					beginAtZero: false
 				},
 				gridLines: {
-          			color: "#000000",
-          			display: false
+          			color: "#c6c1c1",
+          			display: true
         		}
 			}]
 		},
@@ -209,7 +181,7 @@ let monthlyChart = new Chart(monthlyTraffic, {
          }
 	}
 });
-
+list.firstElementChild.style.backgroundColor = "#3cba9f";
 dailyTraffic.style.display = "none";
 weeklyTraffic.style.display = "none";
 monthlyTraffic.style.display = "none";
@@ -223,16 +195,73 @@ list.addEventListener("click", (e) => {
       if (li.innerHTML == items[i].innerHTML) {
         // document.getElementById(li.innerHTML + "-traffic").style.display="block";
         document.getElementsByTagName("canvas")[i].style.display="block";
+        li.style.backgroundColor = "#3cba9f";
       } else {
         document.getElementsByTagName("canvas")[i].style.display="none";
+        items[i].style.backgroundColor = "#575683";
       }
     }
   }
 
 });
 
-let canvas = document.getElementsByTagName("canvas");
+let daily = new Chart(barDailyTraffic, {
+  type: "bar",
+  data: {
+    labels: ["M","T","W","T","F","S","S", ],
+    datasets: [{
+      data: [50,100,150,200,170,250,50,40],
+      backgroundColor: "#3cba9f",
 
-for (let i = 0; i < canvas.length; i++) {
-  console.log(document.getElementsByTagName("canvas")[i]);
-}
+    }]
+  },
+  options: {
+    legend: {
+      display:false,
+    },
+    scales: {
+      xAxes: [{
+        barThickness: 25,
+        gridLines: {
+          color: "#c6c1c1",
+          display: true
+        },
+        ticks: {
+          max: 300
+        }
+      }],
+
+			yAxes: [{
+				gridLines: {
+          			color: "#c6c1c1",
+          			display: true,
+        },
+        ticks: {
+          max: 300
+        }
+
+			}]
+		},
+  }
+});
+
+let mobile = new Chart(mobileUsers, {
+  type: "doughnut",
+  data: {
+    labels:["Phones", "Tablets", "Desktop"],
+    datasets: [{
+      data: [150, 90, 50],
+      backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
+    }]
+  },
+  options: {
+    legend: {
+      display:true,
+      position: "right",
+      labels: {
+        padding: 20,
+        boxWidth: 20
+      },
+    }
+  }
+})

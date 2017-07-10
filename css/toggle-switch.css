@@ -305,11 +305,11 @@
       padding-right: 1.875em; }
   .switch-ios.switch-light input:checked ~ span a {
     left: 100%;
-    border-color: #7477BF;
+    border-color: #3cba9f;
     margin-left: -2em; }
   .switch-ios.switch-light input:checked ~ span {
-    border-color: #7477BF;
-    box-shadow: inset 0 0 0 30px #7477BF; }
+    border-color: #3cba9f;
+    box-shadow: inset 0 0 0 30px #3cba9f; }
   .switch-ios.switch-light input:checked ~ span span:first-of-type {
     opacity: 0; }
   .switch-ios.switch-light input:checked ~ span span:last-of-type {
@@ -320,7 +320,7 @@
     border-radius: 30px;
     box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0; }
     .switch-ios.switch-toggle a {
-      background-color: #7477BF;
+      background-color: #3cba9f;
       border: 0.125em solid #D8D9DB;
       border-radius: 1.75em;
       -webkit-transition: all 0.12s ease-out;

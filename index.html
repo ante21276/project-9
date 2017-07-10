@@ -14,19 +14,19 @@
     <link rel="stylesheet" type="text/css" href="css/toggle-switch.css">
     <link rel="stylesheet" type="text/css" href="css/charts.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/tooltip.css">
   </head>
   <body>
     <nav class="horizontal">
       <ul>
-        <a class="link-1"><li class="item-1"><button class="hamburger">&#9776;</button></li></a>
-        <a class="link-2"><li class="item-2"><button class="cross">&#735;</button></li></a>
-        <a class="link-3"><li class="item-3">Rentlio<span>App</span></li></a>
-        <a class="link-4"><li class="item-4">
+        <li class="item-1"><button class="hamburger">&#9776;</button></li>
+        <li class="item-2"><button class="cross">&#735;</button></li>
+        <li class="item-3">Rentlio<span>App</span></li>
+        <li class="item-4"><span id="tool-span" class="tool" data-tip="You have new reservation">
             <svg version="1.1" id="bell" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
             <style type="text/css">
             	.st0{fill:#fff;}
-
             </style>
             <g id="_x36__6_">
             	<g>
@@ -35,19 +35,19 @@
             	</g>
             </g>
             </svg>
-          </li>
-        </a>
-        <a class="link-5"><li class="item-5"><img src="img/avatar.png"></li></a>
-        <a class="link-6"><li class="item-6">Ante Petrović</li></a>
+          </span>
+        </li>
+        <li class="item-5"><img src="img/avatar.png" alt="user-photo"></li>
+        <li class="item-6">Ante Petrović</li>
       </ul>
     </nav>
 
     <div class="menu">
       <ul>
-        <a href="#"><li>DASHBOARD</li></a>
-        <a href="#"><li>MEMBERS</li></a>
-        <a href="#"><li>VISITS</li></a>
-        <a href="#"><li>SETTINGS</li></a>
+        <li>DASHBOARD</li>
+        <li>MEMBERS</li>
+        <li>VISITS</li>
+        <li>SETTINGS</li>
       </ul>
     </div>
     <nav  class="vertical">
@@ -151,6 +151,7 @@
       </div>
       <div class="traffic-1">
         <div id="js-legend">
+          <h4>TRAFFIC</h4>
           <ul id="traffic-ul">
             <li>Hourly</li>
             <li>Daily</li>
@@ -158,18 +159,22 @@
             <li>Monthly</li>
           </ul>
         </div>
-        <canvas class="Hourly" id="Hourly-traffic" width="800" height="300"></canvas>
-        <canvas class="Daily" id="Daily-traffic" width="800" height="300"></canvas>
-        <canvas class="weekly" id="Weekly-traffic" width="800" height="300"></canvas>
-        <canvas class="monthly" id="Monthly-traffic" width="800" height="300"></canvas>
+        <canvas class="Hourly" id="Hourly-traffic" width="800" height="250"></canvas>
+        <canvas class="Daily" id="Daily-traffic" width="800" height="250"></canvas>
+        <canvas class="weekly" id="Weekly-traffic" width="800" height="250"></canvas>
+        <canvas class="monthly" id="Monthly-traffic" width="800" height="250"></canvas>
       </div>
       <div class="traffic-2">
         <div class="daily-traffic">
-            <canvas id="bar-daily-traffic" width="400" height="150"></canvas>
+          <h4>DAILY TRAFFIC</h4>
+          <canvas id="bar-daily-traffic" width="300" height="150"></canvas>
         </div>
 
         <div class="mobile-users">
-            <canvas id="mobile-users" width="400" height="150"></canvas>
+          <h4>MOBILE USERS</h4>
+          <div class="doughnut">
+            <canvas id="mobile-users" width="300" height="150"></canvas>
+          </div>
         </div>
       </div>
       <div class="social-div">
@@ -188,7 +193,7 @@
           </div>
         </div>
         <div class="social">
-          <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 56.693 56.693" height="56.693px" class="social-svg" version="1.1" viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/></svg>
+          <svg enable-background="new 0 0 56.693 56.693" height="56.693px" class="social-svg" version="1.1" viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/></svg>
           <div class="visitors">
             <h5>Facebook</h5>
             <h4>8,739</h4>
@@ -231,7 +236,7 @@
               <h5>Victoria Chambers</h5>
               <h6>victoria.chambers@example.com</h6>
             </div>
-            <p id="date">22/12/12</p>
+            <p class="date">22/12/12</p>
           </div>
           <div class="mem-div">
             <img src="img/member2.jpg" alt="member-photo">
@@ -239,7 +244,7 @@
               <h5>Dawn Wood</h5>
               <h6>dawn.wood@example.com</h6>
             </div>
-            <p id="date">22/12/12</p>
+            <p class="date">22/12/12</p>
           </div>
           <div class="mem-div">
             <img src="img/member3.jpg" alt="member-photo">
@@ -247,15 +252,15 @@
               <h5>Dan Oliver</h5>
               <h6>dan.oliver@example.com</h6>
             </div>
-            <p id="date">22/12/12</p>
+            <p class="date">22/12/12</p>
           </div>
           <div class="mem-div">
             <img src="img/member4.jpg" alt="member-photo">
             <div class="member">
-              <h5>Victoria Chambers</h5>
-              <h6>victoria.chambers@example.com</h6>
+              <h5>Dale Byrd</h5>
+              <h6>dale.byrd@example.com</h6>
             </div>
-            <p id="date">22/12/12</p>
+            <p class="date">22/12/12</p>
           </div>
         </div>
 
@@ -269,7 +274,7 @@
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="icon-next" id="Capa_1" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve" width="512px" height="512px">
             <g>
-            	<path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   " fill="#7d7d7d"/>
+            	<path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   " fill="#fff"/>
             </g>
             <g>
             </g>
@@ -309,9 +314,9 @@
               <h5>Dawn Wood like the post Facebook's Changes for 2016</h5>
               <h6>5 hours ago</h6>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="icon-next" id="Capa_1" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve" width="512px" height="512px">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="icon-next" id="Capa_2" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve" width="512px" height="512px">
             <g>
-            	<path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   " fill="#7d7d7d"/>
+            	<path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   " fill="#fff"/>
             </g>
             <g>
             </g>
@@ -351,9 +356,9 @@
               <h5>Dan Oliver commented on Facebook's Changes for 2016</h5>
               <h6>5 hours ago</h6>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="icon-next" id="Capa_1" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve" width="512px" height="512px">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="icon-next" id="Capa_3" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve" width="512px" height="512px">
             <g>
-            	<path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   " fill="#7d7d7d"/>
+            	<path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   " fill="#fff"/>
             </g>
             <g>
             </g>
@@ -390,12 +395,12 @@
           <div class="mem-div">
             <img src="img/member4.jpg" alt="member-photo">
             <div class="member">
-              <h5>Victoria Chambers posted YourApp's SEO Tips</h5>
+              <h5>Dale Byrd posted YourApp's SEO Tips</h5>
               <h6>1 day ago</h6>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="icon-next" id="Capa_1" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve" width="512px" height="512px">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="icon-next" id="Capa_4" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve" width="512px" height="512px">
             <g>
-            	<path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   " fill="#7d7d7d"/>
+            	<path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   " fill="#fff"/>
             </g>
             <g>
             </g>
@@ -433,34 +438,36 @@
       </div>
       <div class="settings">
         <div class="settings-message">
-          <form>
-            <legend>MESSAGE USER</legend>
-            <input type="text" placeholder="Search for User">
-            <textarea placeholder="Message for User"></textarea>
-            <input class="button" type="submit">
+          <h5>MESSAGE USER</h5>
+          <form autocomplete="on">
+            <input id="search-users" type="text" placeholder="Search for User" autocomplete="on" list="users-list">
+            <datalist id="users-list">
+            </datalist>
+            <textarea placeholder="Message for User" id="text_area"></textarea>
+            <input class="button" type="button" value="SEND" id="send-button">
           </form>
         </div>
         <div class="settings-notifications">
           <h5>SETTINGS</h5>
             <div>
               <label class="switch-ios switch-light" onclick="">
-                <input type="checkbox">
+                <input type="checkbox" id="notification-checkbox">
                 <strong>
                   Send Email Notifications
                 </strong>
-                <span class="switch">
-                  <span class="off">OFF</span>
-                  <span class="on">ON</span>
+                <span class="switch" id="notifications-switch">
+                  <span id="notifications-off" class="off">OFF</span>
+                  <span id="notifications-on" class="on" >ON</span>
                   <a></a>
                 </span>
               </label>
 
               <label class="switch-ios switch-light" onclick="">
-                <input type="checkbox">
+                <input type="checkbox" id="public-checkbox">
                 <strong>
                   Set Profile to Public
                 </strong>
-                <span class="switch">
+                <span class="switch" id="public-switch">
                   <span class="off">OFF</span>
                   <span class="on">ON</span>
                   <a></a>
@@ -468,93 +475,42 @@
               </label>
             </div>
             <form>
-              <select>
+              <select id="select">
                  <option hidden>Select Timezone</option>
-                	<option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
-                	<option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
-                	<option timeZoneId="3" gmtAdjustment="GMT-10:00" useDaylightTime="0" value="-10">(GMT-10:00) Hawaii</option>
-                	<option timeZoneId="4" gmtAdjustment="GMT-09:00" useDaylightTime="1" value="-9">(GMT-09:00) Alaska</option>
-                	<option timeZoneId="5" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Pacific Time (US & Canada)</option>
-                	<option timeZoneId="6" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Tijuana, Baja California</option>
-                	<option timeZoneId="7" gmtAdjustment="GMT-07:00" useDaylightTime="0" value="-7">(GMT-07:00) Arizona</option>
-                	<option timeZoneId="8" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-7">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
-                	<option timeZoneId="9" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-7">(GMT-07:00) Mountain Time (US & Canada)</option>
-                	<option timeZoneId="10" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="-6">(GMT-06:00) Central America</option>
-                	<option timeZoneId="11" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="-6">(GMT-06:00) Central Time (US & Canada)</option>
-                	<option timeZoneId="12" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="-6">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
-                	<option timeZoneId="13" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="-6">(GMT-06:00) Saskatchewan</option>
-                	<option timeZoneId="14" gmtAdjustment="GMT-05:00" useDaylightTime="0" value="-5">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
-                	<option timeZoneId="15" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="-5">(GMT-05:00) Eastern Time (US & Canada)</option>
-                	<option timeZoneId="16" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="-5">(GMT-05:00) Indiana (East)</option>
-                	<option timeZoneId="17" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="-4">(GMT-04:00) Atlantic Time (Canada)</option>
-                	<option timeZoneId="18" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="-4">(GMT-04:00) Caracas, La Paz</option>
-                	<option timeZoneId="19" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="-4">(GMT-04:00) Manaus</option>
-                	<option timeZoneId="20" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="-4">(GMT-04:00) Santiago</option>
-                	<option timeZoneId="21" gmtAdjustment="GMT-03:30" useDaylightTime="1" value="-3.5">(GMT-03:30) Newfoundland</option>
-                	<option timeZoneId="22" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Brasilia</option>
-                	<option timeZoneId="23" gmtAdjustment="GMT-03:00" useDaylightTime="0" value="-3">(GMT-03:00) Buenos Aires, Georgetown</option>
-                	<option timeZoneId="24" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Greenland</option>
-                	<option timeZoneId="25" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Montevideo</option>
-                	<option timeZoneId="26" gmtAdjustment="GMT-02:00" useDaylightTime="1" value="-2">(GMT-02:00) Mid-Atlantic</option>
-                	<option timeZoneId="27" gmtAdjustment="GMT-01:00" useDaylightTime="0" value="-1">(GMT-01:00) Cape Verde Is.</option>
-                	<option timeZoneId="28" gmtAdjustment="GMT-01:00" useDaylightTime="1" value="-1">(GMT-01:00) Azores</option>
-                	<option timeZoneId="29" gmtAdjustment="GMT+00:00" useDaylightTime="0" value="0">(GMT+00:00) Casablanca, Monrovia, Reykjavik</option>
-                	<option timeZoneId="30" gmtAdjustment="GMT+00:00" useDaylightTime="1" value="0">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London</option>
-                	<option timeZoneId="31" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
-                	<option timeZoneId="32" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
-                	<option timeZoneId="33" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
-                	<option timeZoneId="34" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
-                	<option timeZoneId="35" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) West Central Africa</option>
-                	<option timeZoneId="36" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Amman</option>
-                	<option timeZoneId="37" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Athens, Bucharest, Istanbul</option>
-                	<option timeZoneId="38" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Beirut</option>
-                	<option timeZoneId="39" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Cairo</option>
-                	<option timeZoneId="40" gmtAdjustment="GMT+02:00" useDaylightTime="0" value="2">(GMT+02:00) Harare, Pretoria</option>
-                	<option timeZoneId="41" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
-                	<option timeZoneId="42" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Jerusalem</option>
-                	<option timeZoneId="43" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Minsk</option>
-                	<option timeZoneId="44" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Windhoek</option>
-                	<option timeZoneId="45" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Kuwait, Riyadh, Baghdad</option>
-                	<option timeZoneId="46" gmtAdjustment="GMT+03:00" useDaylightTime="1" value="3">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
-                	<option timeZoneId="47" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Nairobi</option>
-                	<option timeZoneId="48" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Tbilisi</option>
-                	<option timeZoneId="49" gmtAdjustment="GMT+03:30" useDaylightTime="1" value="3.5">(GMT+03:30) Tehran</option>
-                	<option timeZoneId="50" gmtAdjustment="GMT+04:00" useDaylightTime="0" value="4">(GMT+04:00) Abu Dhabi, Muscat</option>
-                	<option timeZoneId="51" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="4">(GMT+04:00) Baku</option>
-                	<option timeZoneId="52" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="4">(GMT+04:00) Yerevan</option>
-                	<option timeZoneId="53" gmtAdjustment="GMT+04:30" useDaylightTime="0" value="4.5">(GMT+04:30) Kabul</option>
-                	<option timeZoneId="54" gmtAdjustment="GMT+05:00" useDaylightTime="1" value="5">(GMT+05:00) Yekaterinburg</option>
-                	<option timeZoneId="55" gmtAdjustment="GMT+05:00" useDaylightTime="0" value="5">(GMT+05:00) Islamabad, Karachi, Tashkent</option>
-                	<option timeZoneId="56" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="5.5">(GMT+05:30) Sri Jayawardenapura</option>
-                	<option timeZoneId="57" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="5.5">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
-                	<option timeZoneId="58" gmtAdjustment="GMT+05:45" useDaylightTime="0" value="5.75">(GMT+05:45) Kathmandu</option>
-                	<option timeZoneId="59" gmtAdjustment="GMT+06:00" useDaylightTime="1" value="6">(GMT+06:00) Almaty, Novosibirsk</option>
-                	<option timeZoneId="60" gmtAdjustment="GMT+06:00" useDaylightTime="0" value="6">(GMT+06:00) Astana, Dhaka</option>
-                	<option timeZoneId="61" gmtAdjustment="GMT+06:30" useDaylightTime="0" value="6.5">(GMT+06:30) Yangon (Rangoon)</option>
-                	<option timeZoneId="62" gmtAdjustment="GMT+07:00" useDaylightTime="0" value="7">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
-                	<option timeZoneId="63" gmtAdjustment="GMT+07:00" useDaylightTime="1" value="7">(GMT+07:00) Krasnoyarsk</option>
-                	<option timeZoneId="64" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option>
-                	<option timeZoneId="65" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Kuala Lumpur, Singapore</option>
-                	<option timeZoneId="66" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Irkutsk, Ulaan Bataar</option>
-                	<option timeZoneId="67" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Perth</option>
-                	<option timeZoneId="68" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Taipei</option>
-                	<option timeZoneId="69" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="9">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
-                	<option timeZoneId="70" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="9">(GMT+09:00) Seoul</option>
-                	<option timeZoneId="71" gmtAdjustment="GMT+09:00" useDaylightTime="1" value="9">(GMT+09:00) Yakutsk</option>
-                	<option timeZoneId="72" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="9.5">(GMT+09:30) Adelaide</option>
-                	<option timeZoneId="73" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="9.5">(GMT+09:30) Darwin</option>
-                	<option timeZoneId="74" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="10">(GMT+10:00) Brisbane</option>
-                	<option timeZoneId="75" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Canberra, Melbourne, Sydney</option>
-                	<option timeZoneId="76" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Hobart</option>
-                	<option timeZoneId="77" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="10">(GMT+10:00) Guam, Port Moresby</option>
-                	<option timeZoneId="78" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Vladivostok</option>
-                	<option timeZoneId="79" gmtAdjustment="GMT+11:00" useDaylightTime="1" value="11">(GMT+11:00) Magadan, Solomon Is., New Caledonia</option>
-                	<option timeZoneId="80" gmtAdjustment="GMT+12:00" useDaylightTime="1" value="12">(GMT+12:00) Auckland, Wellington</option>
-                	<option timeZoneId="81" gmtAdjustment="GMT+12:00" useDaylightTime="0" value="12">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option>
-                	<option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="13">(GMT+13:00) Nuku'alofa</option>
+                 <option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
+                 <option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
+                 <option value="-10.0">(GMT -10:00) Hawaii</option>
+                 <option value="-9.0">(GMT -9:00) Alaska</option>
+                 <option value="-8.0">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+                 <option value="-7.0">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+                 <option value="-6.0">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+                 <option value="-5.0">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+                 <option value="-4.0">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+                 <option value="-3.5">(GMT -3:30) Newfoundland</option>
+                 <option value="-3.0">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+                 <option value="-2.0">(GMT -2:00) Mid-Atlantic</option>
+                 <option value="-1.0">(GMT -1:00 hour) Azores, Cape Verde Islands</option>
+                 <option value="0.0">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+                 <option value="1.0">(GMT +1:00 hour) Brussels, Copenhagen, Madrid, Paris</option>
+                 <option value="2.0">(GMT +2:00) Kaliningrad, South Africa</option>
+                 <option value="3.0">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+                 <option value="3.5">(GMT +3:30) Tehran</option>
+                 <option value="4.0">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+                 <option value="4.5">(GMT +4:30) Kabul</option>
+                 <option value="5.0">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+                 <option value="5.5">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+                 <option value="5.75">(GMT +5:45) Kathmandu</option>
+                 <option value="6.0">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+                 <option value="7.0">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+                 <option value="8.0">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+                 <option value="9.0">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+                 <option value="9.5">(GMT +9:30) Adelaide, Darwin</option>
+                 <option value="10.0">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+                 <option value="11.0">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+                 <option value="12.0">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
               </select>
-              <input class="small-buttons " type="submit" value="SAVE">
-              <input class="small-buttons"  type="submit" value="CANCEL">
+              <input class="small-buttons" id="save-button" type="button" value="SAVE">
+              <input class="small-buttons" id="cancel-button" type="button" value="CANCEL">
 
             </form>
           </div>
