@@ -21,6 +21,7 @@
 #js-legend ul {
   display: flex;
   flex-direction: row;
+  padding-left: 0;
 }
 #js-legend h4 {
   margin-right: auto;
@@ -67,6 +68,16 @@
 }
 .doughnut {
   display: flex;
+}
+
+@media screen and (min-width:768px) {
+  #js-legend ul li {
+    color: #fff;
+    font-size: 12px;
+    margin-left: 5px;
+    padding: 8px;
+    border-radius: 15px;
+  }
 }
 
 @media screen and (min-width:768px) {

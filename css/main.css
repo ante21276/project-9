@@ -139,21 +139,22 @@ main {
   background: #7477BF;
   border-radius: 4px;
   height: 30px;
+  display: flex;
+  justify-content: space-between;
+
 }
 .alert-message h4 {
   margin:0;
-  width: 80%;
   font-weight: 300;
   font-size: 12px;
   text-align: left;
-  padding: 8px;
-  float: left;
+  padding-top: 8px;
+  padding-left: 10px;
 }
 .alert-message h4 span {
     font-weight: bold;
 }
 .alert-message button {
-    margin: 8px 15px 0 0;
     background:none;
     color:#fff;
     border:0;
@@ -161,9 +162,8 @@ main {
     font-size: 30px;
     cursor:pointer;
     outline: none;
-    padding: 0;
     background-color: transparent;
-    float: right;
+    padding-top: 6px;
 }
 .social-div {
   clear: both;
@@ -183,12 +183,13 @@ main {
 }
 .social-svg {
   margin: 15px;
-  width: 20px;
-  height: 20px;
+  width: 27px;
+  height: 27px;
   padding: 10px;
   background: #7477BF;
   border-radius: 50%;
 }
+
 .social-div div h5,
 .social-div div h4 {
   margin:0;
@@ -421,6 +422,9 @@ select,
   }
   main {
     margin-left: 60px;
+  }
+  .alert-message {
+    height: 30px;
   }
   .top-div {
     flex-direction: row;

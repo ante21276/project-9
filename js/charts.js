@@ -30,6 +30,7 @@ let hourlyChart = new Chart (hourlyTraffic, {
 		]
 	},
   options: {
+
 		scales: {
 			xAxes: [{
         ticks: {
@@ -41,7 +42,8 @@ let hourlyChart = new Chart (hourlyTraffic, {
 			}],
 			yAxes: [{
 				ticks: {
-					beginAtZero: true
+					beginAtZero: true,
+          max: 40
 				},
 				gridLines: {
           			color: "#c6c1c1",
@@ -51,7 +53,7 @@ let hourlyChart = new Chart (hourlyTraffic, {
 		},
 		legend: {
             display: false
-         }
+         },
 	}
 });
 
@@ -84,7 +86,8 @@ let dailyChart = new Chart(dailyTraffic, {
 			}],
 			yAxes: [{
 				ticks: {
-					beginAtZero: true
+					beginAtZero: true,
+          max: 80
 				},
 				gridLines: {
           			color: "#c6c1c1",
@@ -112,7 +115,7 @@ let weeklyChart = new Chart(weeklyTraffic, {
 				pointBorderColor: "#fff",
 				pointHoverRadius: 4,
 				pointRadius: 3,
-				data: [153,175,164,186, 178, 181, 150]
+				data: [10,55,100,186, 178, 101, 50]
 			}
 		]
 	},
@@ -126,7 +129,8 @@ let weeklyChart = new Chart(weeklyTraffic, {
 			}],
 			yAxes: [{
 				ticks: {
-					beginAtZero: false
+					beginAtZero: true,
+          max: 250
 				},
 				gridLines: {
           			color: "#c6c1c1",
@@ -255,6 +259,14 @@ let mobile = new Chart(mobileUsers, {
     }]
   },
   options: {
+    layout: {
+          padding: {
+              left: 0,
+              right: 40,
+              top: 10,
+              bottom: 0
+          }
+      },
     legend: {
       display:true,
       position: "right",
